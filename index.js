@@ -66,7 +66,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(copyFlavors){
-  if (copyFlavors.length = 31)
+  if (copyFlavors.length = 31);
     return true 
  }
  is31Flavors
