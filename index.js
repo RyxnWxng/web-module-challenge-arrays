@@ -46,9 +46,11 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(copyFlavors){
+  return [...copyFlavors];
 }
+copy(originalFlavors)
+
 
 
 
@@ -63,9 +65,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(copyFlavors){
+  if (copyFlavors.length = 31);
+    return true 
  }
+ is31Flavors
+
 
 
 
@@ -82,9 +87,13 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(copyFlavors, string){
+  copyFlavors.unshift(string)
+  return copyFlavors
+  console.log(copyFlavors)
  }
+ addFlavor(originalFlavors, `Rainbow Sherbert`)
+
 
 
 
@@ -100,9 +109,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
-}
+function removeLastFlavor(copyFlavors){
+  copyFlavors.pop();
+  return copyFlavors;
+ }
+ removeLastFlavor(originalFlavors)
+
 
 
 
@@ -118,9 +130,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(copyFlavors, number){
+  return copyFlavors[number]
 }
+getFlavorByIndex(originalFlavors, 2)
+
 
 
 
@@ -138,9 +152,15 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(copyFlavors, flavor){
+  for(let i = 0; i < copyFlavors.length; i++){
+    if(copyFlavors[i] === flavor){
+      copyFlavors.splice(i, 1);
+    }
+  }
+  return copyFlavors;
 }
+
 
 
 
@@ -163,9 +183,16 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(copyFlavors, flavor){
+  let filteredArray = [] ;
+  for(let i = 0; i < copyFlavors.length; i++){
+      if(copyFlavors[i].includes(flavor)){
+        filteredArray.push(copyFlavors[i]);
+      }
+  }
+  return filteredArray;
 }
+filterByWord(originalFlavors, 'Chocolate')
 
 
 
